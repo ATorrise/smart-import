@@ -17,7 +17,7 @@
     "commands": [
       {
         "command": "extension.autoImport",
-        "title": "Auto Import"
+        "title": "Smart Import"
       }
     ],
     "menus": {

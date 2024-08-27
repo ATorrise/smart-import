@@ -1,71 +1,37 @@
-# smart-import README
+# SmartImport
 
-This is the README for your extension "smart-import". After writing up a brief description, we recommend including the following sections.
+## Overview
+
+**SmartImport** simplifies adding `import` or `require` statements to your code. By right-clicking a file and selecting "Smart Import" from the context menu, the extension calculates the relative path and automatically inserts the correct syntax for your module imports at the top of your currently open file.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Context Menu Integration**: Quickly add import or require statements by right-clicking a file and selecting "Smart Import".
+- **Dynamic Import Method**: Automatically uses `import` or `require` based on the file type and editor language.
+- **Relative Path Calculation**: Ensures correct module location using `path.relative`.
+- **Cross-Platform Compatibility**: Converts backslashes (`\`) to forward slashes (`/`) for all OS compatibility.
+- **User Feedback**: Confirms import addition with a message in the information bar.
 
-For example if there is an image subfolder under your extension project workspace:
+## Usage
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Open a file in VS Code.
+2. In the Explorer pane, right-click on the file containing the exports that you want to import.
+3. Select "Smart Import" from the context menu.
+4. The appropriate `import` or `require` statement will be automatically inserted at the top of the currently active file.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### Example
 
-## Requirements
+If you right-click on `myModule.js` in the Explorer and select "Smart Import" while `index.js` is the active editor, the following statement will be added to the top of `index.js`:
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+```javascript
+import something from "./path/to/myModule";
+```
 
-## Extension Settings
+### Installation
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+1. Ensure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your system.
+2. Clone the repository and navigate to the project directory.
+3. Run `npm install` to install the necessary dependencies.
+4. Compile the extension by running `npm run compile`.
+5. Package the extension with `vsce package`.
+6. Install the packaged extension in VS Code using `code --install-extension smart-import-0.0.1.vsix`.

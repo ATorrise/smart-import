@@ -9,14 +9,28 @@ export function activate(context: vscode.ExtensionContext) {
             return;
         }
 
-        // Calculate relative path
+        // Calculate the relative path
         const fromPath = path.relative(
             path.dirname(editor.document.uri.fsPath),
             fileUri.fsPath
-        );
+        ).replace(/\\/g, '/'); // Ensure cross-platform compatibility
 
-        // Generate the import statement
-        const importStatement = `import something from "${fromPath.replace(/\\/g, '/')}";\n`;
+        // Determine whether to use 'import' or 'require'
+        const fileExtension = path.extname(fileUri.fsPath);
+        let importStatement: string;
+
+        if (fileExtension === '.js' || fileExtension === '.ts') {
+            if (editor.document.languageId === 'javascript' || editor.document.languageId === 'typescript') {
+                // Use 'import' for JavaScript and TypeScript files
+                importStatement = `import something from "${fromPath}";\n`;
+            } else {
+                // Default to 'require' for other cases (common in Node.js)
+                importStatement = `const something = require("${fromPath}");\n`;
+            }
+        } else {
+            vscode.window.showErrorMessage('The file type is not supported for import.');
+            return;
+        }
 
         // Insert the import statement at the top of the file
         await editor.edit(editBuilder => {
