@@ -2,8 +2,7 @@
 
 All notable changes to the "smart-import" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
 ## [Unreleased]
 
-- Initial release
+### Added
+- Added "Smart Import" to the context menu, allowing users to insert import or require statements with dynamic syntax, relative path calculation, cross-platform compatibility, and confirmation in the VS Code information bar.
