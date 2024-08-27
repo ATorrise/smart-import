@@ -1,7 +1,7 @@
 {
   "name": "smart-import",
   "displayName": "SmartImport",
-  "description": "An extension that allows users to quickly add import statements by selecting a file in the explorer and choosing 'Auto Import' from the context menu.",
+  "description": "An extension that allows users to quickly add import statements by selecting a file in the explorer and choosing 'Smart Import' from the context menu.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.92.0"
@@ -10,20 +10,19 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.autoImport"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.autoImport",
+        "command": "extension.smartImport",
         "title": "Smart Import"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "extension.autoImport",
+          "command": "extension.smartImport",
           "when": "resourceLangId == typescript || resourceLangId == javascript",
           "group": "navigation@1"
         }

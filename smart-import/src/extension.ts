@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import * as path from 'path';
 
 export function activate(context: vscode.ExtensionContext) {
-    const disposable = vscode.commands.registerCommand('extension.autoImport', async (fileUri: vscode.Uri) => {
+    const disposable = vscode.commands.registerCommand('extension.smartImport', async (fileUri: vscode.Uri) => {
         const editor = vscode.window.activeTextEditor;
         if (!editor || !fileUri) {
             vscode.window.showErrorMessage('No active editor or file selected');
@@ -24,7 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
                 // Use 'import' for JavaScript and TypeScript files
                 importStatement = `import something from "${fromPath}";\n`;
             } else {
-                // Default to 'require' for other cases (common in Node.js)
+                // Default to 'require' for other cases
                 importStatement = `const something = require("${fromPath}");\n`;
             }
         } else {
