@@ -1,8 +1,8 @@
-# SmartImport
+# Smart Import
 
 ## Overview
 
-**SmartImport** is another method of adding `import` or `require` statements to your code. By right-clicking a file and selecting "Smart Import" from the context menu, the extension calculates the relative path and automatically inserts the correct syntax for your module imports at the top of your currently open file.
+**Smart Import** is another method of adding `import` or `require` statements to your code. By right-clicking a file and selecting "Smart Import" from the context menu, the extension calculates the relative path and automatically inserts the correct syntax for your module imports at the top of your currently open file.
 
 ## Features
 
@@ -27,7 +27,7 @@ If you right-click on `myModule.js` in the Explorer and select "Smart Import" wh
 import something from "./path/to/myModule";
 ```
 
-![Watch the demo](./src/assets/screenRecording_smartImport.gif)
+![Watch the demo](./src/assets/screenRecording_Smart Import.gif)
 
 ### Installation
 
