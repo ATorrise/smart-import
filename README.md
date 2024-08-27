@@ -27,7 +27,7 @@ If you right-click on `myModule.js` in the Explorer and select "Smart Import" wh
 import something from "./path/to/myModule";
 ```
 
-![Watch the demo](../smart-import/src/assets/screenRecording_smartImport.gif)
+![Watch the demo](src/assets/screenRecording_smartImport.gif)
 
 ### Installation
 
