@@ -27,6 +27,8 @@ If you right-click on `myModule.js` in the Explorer and select "Smart Import" wh
 import something from "./path/to/myModule";
 ```
 
+![Watch the demo](./src/assets/screenRecording_smartImport.gif)
+
 ### Installation
 
 1. Ensure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your system.
