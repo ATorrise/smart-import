@@ -2,7 +2,7 @@
 
 ## Overview
 
-**SmartImport** simplifies adding `import` or `require` statements to your code. By right-clicking a file and selecting "Smart Import" from the context menu, the extension calculates the relative path and automatically inserts the correct syntax for your module imports at the top of your currently open file.
+**SmartImport** is another method of adding `import` or `require` statements to your code. By right-clicking a file and selecting "Smart Import" from the context menu, the extension calculates the relative path and automatically inserts the correct syntax for your module imports at the top of your currently open file.
 
 ## Features
 
@@ -35,3 +35,4 @@ import something from "./path/to/myModule";
 4. Compile the extension by running `npm run compile`.
 5. Package the extension with `vsce package`.
 6. Install the packaged extension in VS Code using `code --install-extension smart-import-0.0.1.vsix`.
+7. Reload your VS Code window to begin using the extension.

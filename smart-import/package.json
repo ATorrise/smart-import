@@ -3,6 +3,10 @@
   "displayName": "SmartImport",
   "description": "An extension that allows users to quickly add import statements by selecting a file in the explorer and choosing 'Smart Import' from the context menu.",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ATorrise/smart-import.git"
+  },
   "engines": {
     "vscode": "^1.92.0"
   },
